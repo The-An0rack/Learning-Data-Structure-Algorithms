@@ -16,11 +16,12 @@ public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
     while(!nodes.isEmpty())
     {
         int node=nodes.poll();
-        res.add(node);
-        visited[node]=true;
-        for(int child: adj.get(node)) 
-            if(!visited[child]) nodes.offer(child);
-                
+        if(!visited[node])
+        {
+            for(int child: adj.get(node)) nodes.offer(child);
+            res.add(node);
+            visited[node]=true;
+        }
     }
     return res;
 }

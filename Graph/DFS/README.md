@@ -37,11 +37,12 @@ public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
     while(!nodes.isEmpty())
     {
         int node=nodes.pop();
-        res.add(node);
-        visited[node]=true;
-        for(int child: adj.get(node))
-            if(!visited[child]) nodes.push(child);
-        
+        if(!visited[node])
+        {
+            for(int child: adj.get(node)) nodes.push(child);
+            res.add(node);
+            visited[node]=true;
+        }
     }
     return res;
 }
