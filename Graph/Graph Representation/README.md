@@ -2,10 +2,10 @@
 
 ## input
 
-input is generally given in the format of `N` followed by `M` pairs of numbers such that:  
-N : the number of node
-M : the number of edges
-nodes would generally be 1 indexed, i.e. [1, 2, 3, ..., n]
+input is generally given in the format of `N` followed by `M` pairs of numbers such that:   
+N : the number of node  
+M : the number of edges  
+nodes would generally be 1 indexed, i.e. [1, 2, 3, ..., n]  
 every edge `E(u, v)` in the edge list will imply `u->v` (also `v->u` if the graph is undirected)
 
 ## Storing
